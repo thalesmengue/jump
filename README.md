@@ -6,7 +6,7 @@ Criar uma API Rest que possua um método de criação e um método de listagem c
 ## Como rodar o projeto
 ```bash
 # clone o projeto
-$ git clone git@github.com:thalesmengue/greenpay.git
+$ git clone git@github.com:thalesmengue/jump.git
 
 # instale as dependências
 $ composer install
