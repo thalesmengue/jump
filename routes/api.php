@@ -1,19 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\ServiceOrdersController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/service-orders', [ServiceOrdersController::class, 'store'])->name('service-orders.store');
+Route::get('/service-orders', [ServiceOrdersController::class, 'index'])->name('service-orders.index');
+Route::get('/service-orders/{plate}/{perPage?}', [ServiceOrdersController::class, 'getByPlate'])->name('service-orders.getByPlate');
